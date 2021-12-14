@@ -1,0 +1,18 @@
+info.app:
+  name: SpringBootMetrics
+  description: Metrics to InfluxDB in Spring Boot
+  version: 0.1-SNAPSHOT
+
+management:
+  metrics:
+    export.influx:
+      enabled: true
+      db: shit
+      step: 5s
+      uri: http://localhost:8086
+    #web.server.request.autotime.enabled: false
+
+  endpoints.web.exposure.include: "health, info, metrics"
+  info:
+    env:
+      enabled: true
